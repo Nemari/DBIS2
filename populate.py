@@ -148,7 +148,7 @@ numbers = [1, 18, 19, 20, 21, 29, 30, 31, 39, 40, 41, 49, 50, 51, 59, 60, 61, 69
 def populate(conn):
     cur = conn.cursor()
 
-    for name in os.listdir('data'):
+    for name in os.listdir('ZNOData'):
         year = re.findall(r'Odata(\d{4})File.csv', name)
         if year:
             with open(os.path.join('ZNOData', name), encoding='cp1251') as csvfile:
